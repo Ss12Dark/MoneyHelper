@@ -93,11 +93,11 @@ public class MyDBHandler extends SQLiteOpenHelper{
     }
 
 
-    public boolean deleteEvent(String Name) {
+    public boolean deleteEvent(int Name) {
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        return db.delete(TABLE_EVENTS, KEY_NAME + "=" + Name, null) > 0;
+        return db.delete(TABLE_EVENTS, KEY_ID + "=" + Name, null) > 0;
 
     }
 
@@ -117,6 +117,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
             do {
 
                 Event event = new Event();
+                event.setId(Integer.parseInt(cursor.getString(0)));
                 event.setName(cursor.getString(1));
                 event.setDescription(cursor.getString(2));
                 event.setPrice((cursor.getFloat(3)));

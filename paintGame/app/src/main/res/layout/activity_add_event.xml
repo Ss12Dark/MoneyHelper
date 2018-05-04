@@ -14,18 +14,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:inputType="text"
             android:id="@+id/name"
             android:hint="name"
             android:layout_margin="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
+            android:inputType="text"
             android:id="@+id/des"
             android:hint="description"
             android:layout_margin="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
+            android:inputType="numberDecimal"
             android:id="@+id/price"
             android:hint="price"
             android:layout_margin="25dp"
@@ -60,12 +63,6 @@
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <RadioButton
-                android:onClick="type"
-                android:id="@+id/both"
-                android:text="both"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
             <RadioButton
                 android:onClick="type"
                 android:id="@+id/vegan"
@@ -106,6 +103,7 @@
 
         </RadioGroup>
         <EditText
+            android:inputType="text"
             android:id="@+id/location"
             android:hint="location"
             android:layout_margin="25dp"

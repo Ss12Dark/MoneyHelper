@@ -8,6 +8,7 @@ public class Event {
     private int type;
     private int type2;
     private String location;
+    private int id;
 
     public Event (){
 
@@ -20,6 +21,16 @@ public class Event {
         this.type = type;
         this.type2 = type2;
         this.location = location;
+    }
+
+    public Event(String name, String description, float price, int type, int type2, String location,int id) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.type = type;
+        this.type2 = type2;
+        this.location = location;
+        this.id = id;
     }
 
     public String getName() {
@@ -69,5 +80,13 @@ public class Event {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

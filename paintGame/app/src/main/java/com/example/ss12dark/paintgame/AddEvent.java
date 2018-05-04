@@ -1,5 +1,6 @@
 package com.example.ss12dark.paintgame;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,19 @@ public class AddEvent extends AppCompatActivity {
         hangoutGroup = (RadioGroup) findViewById(R.id.hangoutGroup);
 
         db = new MyDBHandler(this);
+
+        Intent i = getIntent();
+        String n = i.getStringExtra("name");
+        String d = i.getStringExtra("des");
+        String p = i.getStringExtra("price");
+        String l = i.getStringExtra("location");
+
+        if(n!=null){
+            etname.setText(n);
+            etdes.setText(d);
+            etprice.setText(p);
+            etlocation.setText(l);
+        }
     }
 
     public void openFood(View v){
@@ -53,7 +67,6 @@ public class AddEvent extends AppCompatActivity {
 
     public void type(View v){
         switch (v.getId()){
-            case R.id.both:{type=1; type2=1;break;}
             case R.id.vegan:{type=1; type2=2;break;}
             case R.id.meatlover:{type=1; type2=3;break;}
             case R.id.outside:{type=2; type2=1;break;}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/name"
+        android:padding="2dp"
+        android:layout_margin="5dp"
+        android:hint="name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/des"
+        android:padding="2dp"
+        android:layout_margin="5dp"
+        android:hint="des"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/price"
+        android:padding="2dp"
+        android:layout_margin="5dp"
+        android:hint="price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/location"
+        android:padding="2dp"
+        android:layout_margin="5dp"
+        android:hint="location"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
